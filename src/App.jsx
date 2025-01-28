@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import Modal from './components/Modal';
 
 export default function App() {
+  const [tap, setTap] = useState(0);
+  const [modal, setModal] = useState(false);
+
+  const handleTap = () => {
+    setTap(tap + 1);
+  };
+
+  const handleModal = () => {
+    setModal(!modal);
+  };
+
   return (
     <div className='wrapper'>
+      {modal && <Modal setModal={handleModal} />}
       <div className='header'>
         <h4>Hamster Kombat</h4>
         <div className='buttons-parent'>
@@ -18,7 +31,7 @@ export default function App() {
             <h4>Coins to level up</h4>
             <span>10 M</span>
           </div>
-          <div className='btn'>
+          <div onClick={handleModal} className='btn'>
             <h4>Profit per hour</h4>
             <div className='btn-coin'>
               <img src='/coin.svg' alt='' />
@@ -29,13 +42,14 @@ export default function App() {
 
         <div className='tap'>
           <img src='/coin.svg' alt='coin' />
-          <h3>507,981</h3>
+          <h3>{tap}</h3>
         </div>
       </div>
 
       <div className='main'>
-        <img src='/tap.svg' alt='tap' />
+        <img onClick={handleTap} src='/tap.svg' alt='tap' />
       </div>
+
       <div className='footer'>
         <div className='footer-top'>
           <div>

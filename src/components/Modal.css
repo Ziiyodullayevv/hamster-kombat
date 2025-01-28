@@ -1,0 +1,91 @@
+.modal {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-card {
+  border-radius: 10px;
+  border: 1px solid #8575756e;
+  margin: 25px;
+  padding: 25px;
+  background-color: #2c2f35;
+  box-shadow: 4px 4px 10px 5px #00000040;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 270px;
+}
+
+.list {
+  color: white;
+  background: #32363c;
+  border-radius: 10px;
+}
+
+.list-item1 {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+.list-item1 h3 {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 9px;
+}
+
+.list-item1 h3 img {
+  width: 12px;
+}
+
+.list-item1 h5 {
+  margin: 5px 0;
+  font-size: 7px;
+  opacity: 0.7;
+}
+
+.list-item2 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+}
+
+.list-item2 h3 {
+  font-size: 9px;
+}
+
+.list-item2-coin {
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 5px;
+  border-left: 0.3px solid #ffffff33;
+}
+
+hr {
+  height: 0.3px;
+  border: 0.3px solid #ffffff33;
+}
+
+.list-item2-coin img {
+  width: 15px;
+}
